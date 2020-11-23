@@ -191,15 +191,27 @@ header p{
 }
 /* RIGHT-SECTION */
 
+/* CHAT SECTION */
+.chat{
+  height:calc(90vh - 160px);
+  overflow-y: scroll;
+}
+
 .messages-container{
-  margin:20px;
+  margin:10px;
 }
 
 .message{
-  margin:20px;
+  margin:10px;
   border-radius: 15px;
   padding: 10px;
   max-width: 80%;
+}
+
+.message span{
+  float: right;
+  color:grey;
+  font-size: 10px;
 }
 
 .sent{
@@ -212,6 +224,7 @@ header p{
   float:left;
 }
 
+/* SEND-MESSAGE SECTION */
 .send-message-section{
   width:100%;
   background-color: #F2EEEA;

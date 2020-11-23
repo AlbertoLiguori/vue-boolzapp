@@ -1,85 +1,4 @@
-let addressBook= [
-  {
-    name:"Michele",
-    imgSrc:"css/img/avatar_1.jpg",
-    lastAccess:"",
-    messages:[
-      {
-        state:"sent",
-        textContent:"ciao come stai?",
-        date:"",
 
-      },
-
-      {
-        state:"received",
-        textContent:"bene e tu?",
-        date:"",
-
-      },
-      {
-        state:"sent",
-        textContent:"niente male! usciamo a cena?",
-        date:"",
-
-      },
-      {
-        state:"received",
-        textContent:"I ristoranti sono chiusi!",
-        date:"",
-
-      },],
-  },
-
-  {
-    name:"Fabio",
-    imgSrc:"css/img/avatar_2.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"Samuele",
-    imgSrc:"css/img/avatar_3.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"Luisa",
-    imgSrc:"css/img/avatar_4.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"John",
-    imgSrc:"css/img/avatar_5.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"Luisa",
-    imgSrc:"css/img/avatar_6.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"Nina",
-    imgSrc:"css/img/avatar_7.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-
-  {
-    name:"Ale",
-    imgSrc:"css/img/avatar_8.jpg",
-    lastAccess:"",
-    messages:[],
-  },
-];
 
 let myApp = new Vue({
 
@@ -119,7 +38,20 @@ let myApp = new Vue({
     },
 
     getMessage: function(){
-      this.textContent = e.target.value
+      let d = new Date();
+
+      let newObjectMessage =
+
+      {
+        state:"sent",
+        textContent:event.target.value,
+        date:d.getHours().toString() + " : " + d.getMinutes().toString(),
+
+      };
+
+      this.actualContact.messages.push(newObjectMessage)
+
+      event.target.value=""
     }
 
   }
