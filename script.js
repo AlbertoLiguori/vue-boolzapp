@@ -45,7 +45,7 @@ let myApp = new Vue({
       {
         state:"sent",
         textContent:event.target.value,
-        date:d.getHours().toString() + " : " + d.getMinutes().toString(),
+        date:d.getDate().toString() +"/" +(d.getMonth()+1).toString()+"/" +d.getFullYear() + "\xa0\xa0" +d.getHours().toString() + " : " + d.getMinutes().toString(),
 
       };
 
