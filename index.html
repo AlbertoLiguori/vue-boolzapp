@@ -168,6 +168,24 @@
 
                     <section class="chat">
 
+                          <ul>
+
+                              <li class="messages-container" v-for="(element, index) in actualContact.messages">
+
+                                 <div class="row">
+
+                                      <div class="message" :class="element.state">
+
+                                          <p>{{element.textContent}}</p>
+                                          <span>date</span>
+
+                                      </div>
+
+                                  </div>
+                              </li>
+
+                          </ul>
+
                     </section>
 
                     <section class="send-message-section">

@@ -191,6 +191,27 @@ header p{
 }
 /* RIGHT-SECTION */
 
+.messages-container{
+  margin:20px;
+}
+
+.message{
+  margin:20px;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 80%;
+}
+
+.sent{
+  background-color: #DCF7C0;
+  float:right;
+}
+
+.received{
+  background-color: white;
+  float:left;
+}
+
 .send-message-section{
   width:100%;
   background-color: #F2EEEA;

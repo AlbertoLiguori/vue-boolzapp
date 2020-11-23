@@ -3,7 +3,32 @@ let addressBook= [
     name:"Michele",
     imgSrc:"css/img/avatar_1.jpg",
     lastAccess:"",
-    messages:[],
+    messages:[
+      {
+        state:"sent",
+        textContent:"ciao come stai?",
+        date:"",
+
+      },
+
+      {
+        state:"received",
+        textContent:"bene e tu?",
+        date:"",
+
+      },
+      {
+        state:"sent",
+        textContent:"niente male! usciamo a cena?",
+        date:"",
+
+      },
+      {
+        state:"received",
+        textContent:"I ristoranti sono chiusi!",
+        date:"",
+
+      },],
   },
 
   {
@@ -28,14 +53,14 @@ let addressBook= [
   },
 
   {
-    name:"Ciccio",
+    name:"John",
     imgSrc:"css/img/avatar_5.jpg",
     lastAccess:"",
     messages:[],
   },
 
   {
-    name:"Ale",
+    name:"Luisa",
     imgSrc:"css/img/avatar_6.jpg",
     lastAccess:"",
     messages:[],
@@ -49,7 +74,7 @@ let addressBook= [
   },
 
   {
-    name:"John",
+    name:"Ale",
     imgSrc:"css/img/avatar_8.jpg",
     lastAccess:"",
     messages:[],
@@ -68,8 +93,9 @@ let myApp = new Vue({
 
     actualContact:addressBook[0],
 
-  },
+    textContent:"",
 
+  },
 
 
   methods:{
@@ -91,6 +117,10 @@ let myApp = new Vue({
       });
 
     },
+
+    getMessage: function(){
+      this.textContent = e.target.value
+    }
 
   }
 
