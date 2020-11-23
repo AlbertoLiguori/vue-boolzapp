@@ -22,14 +22,13 @@ body{
 aside{
   flex:1;
   height:90vh;
-  border:1px solid black;
+  border-right: 1px solid lightgrey;
 }
 
 main{
   position:relative;
   flex:2;
   height:90vh;
-  border:1px solid black;
   background-image: url("img/mine.jpg");
   background-repeat: repeat;
 }
@@ -42,6 +41,19 @@ h3{
   font-size: 18px;
   font-weight: 300;
   color: black;
+}
+
+input{
+  font-size: 14px;
+  color:grey;
+}
+
+a{
+  color:grey;
+}
+
+header p{
+  color:grey;
 }
 
 /* TOOLS & CLEARFIX*/
@@ -109,7 +121,7 @@ h3{
 }
 
 .list-container{
-  height:calc(90vh - 263px);
+  height:calc(90vh - 260px);
   overflow-y: scroll;
 }
 
@@ -129,8 +141,18 @@ h3{
   padding:5px;
 }
 
-.list-container .three-icos-container{
+.list-container .three-icos-container,
+.list-container p{
   display: none;
+}
+
+.list-container li{
+  border-top: 1px solid  #EAEAEA;
+}
+
+.list-container button{
+  background-color: white;
+  border:0px;
 }
 
 /* NOTIFICATIONS */
