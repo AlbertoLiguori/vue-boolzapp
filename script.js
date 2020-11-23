@@ -78,7 +78,7 @@ let myApp = new Vue({
       let d = new Date();
       let index = parseInt(event.target.value);
       this.actualContact = this.filteredArray[index];
-      this.actualContact.lastAccess= d.getHours() + d.getMinutes()
+      this.actualContact.lastAccess= " "+ String(d.getHours()) + " : " + String(d.getMinutes())
 
     },
 
