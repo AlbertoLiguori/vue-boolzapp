@@ -54,7 +54,7 @@ let myApp = new Vue({
       let newReceivedObjectMessage =
       {
         state:"received",
-        textContent:"ok!",
+        textContent:"Io sono Groot!",
         date:d.getDate().toString() +"/" +(d.getMonth()+1).toString()+"/" +d.getFullYear() + "\xa0\xa0" +d.getHours().toString() + " : " + d.getMinutes().toString(),
 
       };
@@ -75,9 +75,9 @@ let myApp = new Vue({
 
 
 
-function hello(){
-  console.log("hello")
-}
-
-//ritarda l'esecusione della funzione in ARG del tempo indicato
-setTimeout(hello,1200)
+// function hello(){
+//   console.log("hello")
+// }
+//
+// //ritarda l'esecusione della funzione in ARG del tempo indicato
+// setTimeout(hello,1200)

@@ -252,7 +252,7 @@ let addressBook= [
       },
       {
         state:"sent",
-        textContent:"se Non mi hanno battezzato non è colpa mia",
+        textContent:"se non mi hanno dato un nome non è mica colpa mia",
         date:"Lun 23 Nov 15:42",
 
       },

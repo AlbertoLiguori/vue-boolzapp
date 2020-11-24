@@ -26,11 +26,8 @@ aside{
 }
 
 main{
-  position:relative;
   flex:2;
   height:90vh;
-  background-image: url("img/mine.jpg");
-  background-repeat: repeat;
 }
 
 ul{
@@ -117,12 +114,16 @@ header p{
 /* LEFT-SECTION */
 .contact-container{
   background-color: #EAEAEA;
+}
 
+.list-container{
+  min-height:60px;
 }
 
 .list-container{
   height:calc(90vh - 260px);
   overflow-y: scroll;
+  background-color: white;
 }
 
 .ico{
@@ -171,7 +172,6 @@ header p{
   text-align: center;
   width:75px;
   font-size: 25px;
-
 }
 
 .search-field-container{
@@ -189,11 +189,15 @@ header p{
   background-color: white;
   border:1px solid white;
 }
+
 /* RIGHT-SECTION */
 
 /* CHAT SECTION */
 .chat{
+  min-height: 160px;
   height:calc(90vh - 160px);
+  background-image: url("img/mine.jpg");
+  background-repeat: repeat;
   overflow-y: scroll;
 }
 
@@ -228,8 +232,6 @@ header p{
 .send-message-section{
   width:100%;
   background-color: #F2EEEA;
-  position:absolute;
-  bottom:0;
   display: flex;
   justify-content:center;
 
