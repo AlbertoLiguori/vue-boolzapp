@@ -38,10 +38,12 @@ let myApp = new Vue({
     },
 
     getMessage: function(){
+
+      let contact = this.actualContact;
+
       let d = new Date();
 
       let newObjectMessage =
-
       {
         state:"sent",
         textContent:event.target.value,
@@ -49,11 +51,33 @@ let myApp = new Vue({
 
       };
 
-      this.actualContact.messages.push(newObjectMessage)
+      let newReceivedObjectMessage =
+      {
+        state:"received",
+        textContent:"ok!",
+        date:d.getDate().toString() +"/" +(d.getMonth()+1).toString()+"/" +d.getFullYear() + "\xa0\xa0" +d.getHours().toString() + " : " + d.getMinutes().toString(),
+
+      };
+
+      contact.messages.push(newObjectMessage)
 
       event.target.value=""
+
+      setTimeout(function (){
+        contact.messages.push(newReceivedObjectMessage)
+
+      },2000)
     }
 
   }
 
 })
+
+
+
+function hello(){
+  console.log("hello")
+}
+
+//ritarda l'esecusione della funzione in ARG del tempo indicato
+setTimeout(hello,1200)
