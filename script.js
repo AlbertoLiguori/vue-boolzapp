@@ -16,25 +16,24 @@ let myApp = new Vue({
 
   },
 
+  computed:{
+
+  },
+
 
   methods:{
 
-    getAnElementByIndex:function(){
+    getAnElementByIndex:function(index){
       let d = new Date();
-      let index = parseInt(event.target.value);
       this.actualContact = this.filteredArray[index];
       this.actualContact.lastAccess= " "+ String(d.getHours()) + " : " + String(d.getMinutes())
-
     },
 
     getFilteredElements:function(){
-
       let searchEl = String(event.target.value)
-
       this.filteredArray = this.contactsArray.filter(function(element){
         return element.name.toLowerCase().includes(searchEl.toLowerCase())
       });
-
     },
 
     getMessage: function(){
@@ -72,12 +71,3 @@ let myApp = new Vue({
   }
 
 })
-
-
-
-// function hello(){
-//   console.log("hello")
-// }
-//
-// //ritarda l'esecusione della funzione in ARG del tempo indicato
-// setTimeout(hello,1200)

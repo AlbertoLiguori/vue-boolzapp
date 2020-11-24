@@ -100,7 +100,7 @@
                                     <ul>
                                           <li v-for="(element, index) in filteredArray">
 
-                                                <button class="item-container flex" @click="getAnElementByIndex()" type="button" name="button" :value="index">
+                                                <div class="item-container flex" @click="getAnElementByIndex(index)" type="button" name="button" :value="index">
 
                                                       <div class="left-item-container flex">
 
@@ -123,7 +123,7 @@
 
                                                       </div>
 
-                                                </button>
+                                                </div>
                                           </li>
 
                                     </ul>
@@ -193,7 +193,7 @@
                               <div class="text-input-container flex">
 
                                     <i class="ico fa fa-smile-o" aria-hidden="true"></i>
-                                    <input v-on:keydown.enter="getMessage()" class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                                    <textarea  v-on:keydown.enter="getMessage()" class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio"></textarea>
                                     <i class="ico fa fa-microphone" aria-hidden="true"></i>
 
                               </div>
