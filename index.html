@@ -91,25 +91,25 @@
                             <div class="search-field-container flex">
 
                                   <i class="ico special-search-ico fa fa-search" aria-hidden="true"></i>
-                                  <input @input="getSearchEl()" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+                                  <input v-model="searchEl" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
 
                             </div>
                             <!-- CONTACT-LIST -->
                             <div class="list-container">
 
                                     <ul>
-                                          <li v-for="(element, index) in filteredArray">
+                                          <li v-for="(contact, index) in filteredArray">
 
                                                 <div class="item-container flex" @click="getAnElementByIndex(index)" type="button" name="button" :value="index">
 
                                                       <div class="left-item-container flex">
 
-                                                            <img class="avatar" :src="(element.imgSrc)" alt="">
+                                                            <img class="avatar" :src="(contact.imgSrc)" alt="">
 
                                                             <div class="user-details-container">
 
-                                                                  <h3>{{element.name}}</h3>
-                                                                  <p>{{element.lastAccess}}</p>
+                                                                  <h3>{{contact.name}}</h3>
+                                                                  <p>{{contact.lastAccess}}</p>
 
                                                             </div>
 
@@ -148,7 +148,7 @@
                                         <div class="user-details-container">
 
                                               <h3>{{actualContact.name}}</h3>
-                                              <p>Ultimo accesso oggi alle{{actualContact.lastAccess}}</p>
+                                              <p>Ultimo accesso oggi alle: {{actualContact.lastAccess}}</p>
 
                                         </div>
 
@@ -170,14 +170,14 @@
 
                           <ul>
 
-                              <li class="messages-container" v-for="(element, index) in actualContact.messages">
+                              <li class="messages-container" v-for="(message, index) in actualContact.messages">
 
                                  <div class="row">
 
-                                      <div class="message" :class="element.state">
+                                      <div class="message" :class="message.state">
 
-                                          <p>{{element.textContent}}</p>
-                                          <span>{{element.date}}</span>
+                                          <p>{{message.textContent}}</p>
+                                          <span>{{message.date}}</span>
 
                                       </div>
 
@@ -193,7 +193,7 @@
                               <div class="text-input-container flex">
 
                                     <i class="ico fa fa-smile-o" aria-hidden="true"></i>
-                                    <textarea  v-on:keydown.enter="getMessage()" class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio"></textarea>
+                                    <textarea   v-model="textContent" v-on:keydown.enter="getMessage()" class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio"></textarea>
                                     <i class="ico fa fa-microphone" aria-hidden="true"></i>
 
                               </div>

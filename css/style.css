@@ -95,7 +95,11 @@ header .item-container
   align-items: center;
   padding-left:10px;
   padding-right:10px;
-  background-color: white
+  background-color: white;
+}
+
+.list-container .item-container:hover{
+  background-color: lightgrey;
 }
 
 .left-item-container{
