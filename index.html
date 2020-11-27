@@ -185,26 +185,27 @@
                               </li>
 
                           </ul>
-                          <div class="emo-container flex" :class="isVisible" @mouseLeave="changeVisibilityClass" >
-
-                                    <ul>
-
-                                          <li v-for="(emo, emoIndex) in emojiArray" @click="getAnEmoByIndex(emoIndex)"class="flex">
-
-                                              <div class="">{{emo.emoji}} </div>
-
-                                          </li>
-
-                                    </ul>
-
-
-                          </div>
 
                     </section>
 
 
 
                     <section class="send-message-section">
+
+                      <div class="emo-container flex" :class="isVisible" @mouseLeave="changeVisibilityClass" >
+
+                                <ul>
+
+                                      <li v-for="(emo, emoIndex) in emojiArray" @click="getAnEmoByIndex(emoIndex)"class="flex">
+
+                                          <div class="">{{emo.emoji}} </div>
+
+                                      </li>
+
+                                </ul>
+
+
+                      </div>
 
                               <div class="text-input-container flex">
 
