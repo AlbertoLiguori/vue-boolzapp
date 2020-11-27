@@ -79,6 +79,10 @@ header .item-container
   clear:both;
 }
 
+.hidden{
+  display:none;
+}
+
 /* dBUG */
 .border{
   border:1px solid black;
@@ -203,7 +207,8 @@ header .item-container
   height:calc(90vh - 160px);
   background-image: url("img/mine.jpg");
   background-repeat: repeat;
-  overflow-y: scroll;
+  overflow-y:scroll;
+  position:relative;
 }
 
 .messages-container{
@@ -257,4 +262,28 @@ header .item-container
   border-radius: 5px;
   border:1px solid white;
   overflow-x: auto;
+}
+
+/* EMOJI */
+
+.emo-container{
+  background-color: lightgrey;
+  width:100%;
+  height:250px;
+  overflow-y: scroll;
+  position: fixed;
+  position:absolute;
+  bottom: 0;
+}
+.emo-container li{
+  justify-content: center;
+  align-items: center;
+  width:30px;
+  height:30px;
+  float:left;
+
+}
+
+.emo-container li:hover{
+  border: 1px solid darkgrey;
 }

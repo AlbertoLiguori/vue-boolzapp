@@ -8,11 +8,16 @@ let myApp = new Vue({
 
     contactsArray:addressBook,
 
+    emojiArray: emoObjectArray,
+
     actualContact:addressBook[0],
 
     textContent:"",
 
     searchEl:"",
+
+    classVisibility:true,
+
   },
 
   computed:{
@@ -23,6 +28,12 @@ let myApp = new Vue({
       });
 
     },
+
+    isVisible: function(){
+      return{
+        hidden : this.classVisibility
+      }
+    }
 
   },
 
@@ -61,6 +72,17 @@ let myApp = new Vue({
         contact.messages.push(newReceivedObjectMessage)
 
       },1200)
+    },
+
+    getAnEmoByIndex:function(index){
+
+      console.log(this.emojiArray[index].emoji)
+      this.textContent+=this.emojiArray[index].emoji
+
+    },
+
+    changeVisibilityClass:function(){
+      this.classVisibility = !this.classVisibility
     }
 
   }

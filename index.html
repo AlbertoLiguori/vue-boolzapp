@@ -25,7 +25,7 @@
 
         <!-- LINK TO JS FUNCTIONS -->
         <script src="data.js" charset="utf-8"></script>
-
+        <script src="emoji.js"></script>
         <title>New Project</title>
     </head>
     <body>
@@ -185,14 +185,30 @@
                               </li>
 
                           </ul>
+                          <div class="emo-container flex" :class="isVisible">
+
+                                    <ul>
+
+                                          <li v-for="(emo, emoIndex) in emojiArray" @click="getAnEmoByIndex(emoIndex)"class="flex">
+
+                                              <div class="">{{emo.emoji}} </div>
+
+                                          </li>
+
+                                    </ul>
+
+
+                          </div>
 
                     </section>
+
+
 
                     <section class="send-message-section">
 
                               <div class="text-input-container flex">
 
-                                    <i class="ico fa fa-smile-o" aria-hidden="true"></i>
+                                    <i @click="changeVisibilityClass" class="ico fa fa-smile-o" aria-hidden="true"></i>
                                     <textarea   v-model="textContent" v-on:keydown.enter="getMessage()" class="input-message" type="text" name="" value="" placeholder="Scrivi un messaggio"></textarea>
                                     <i class="ico fa fa-microphone" aria-hidden="true"></i>
 
@@ -209,4 +225,5 @@
 
         <script src="script.js"></script>
     </body>
+
 </html>
